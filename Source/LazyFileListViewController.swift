@@ -8,10 +8,30 @@
 
 import UIKit
 
-class LazyFileListViewController: UITableViewController {
-	var directoryPath: URL?
+open class LazyFileListViewController: UITableViewController {
+	@IBOutlet internal var closeButton: UIBarButtonItem!
+	@IBOutlet var navigationTitleLabel: UILabel?
+	
+	var directoryURL: URL? {
+		didSet {
+			print("New directory path: \(directoryURL?.path ?? "")")
 
-    override func viewDidLoad() {
+			itemURLs.removeAll()
+			if let directoryURL = directoryURL {
+				do {
+					let urls = try FileManager.default.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil, options: [])
+					itemURLs.append(contentsOf: urls)
+				} catch let err {
+					print("  Error: \(err)")
+				}
+				
+			}
+			navigationTitleLabel?.text = directoryURL?.path
+		}
+	}
+	var itemURLs: [URL]	= []
+
+    override open func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
@@ -20,33 +40,89 @@ class LazyFileListViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
+	open override func didMove(toParentViewController parent: UIViewController?) {
+		super.didMove(toParentViewController: parent)
+		
+	}
+	open override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
 
-    override func didReceiveMemoryWarning() {
+		if navigationController == nil || navigationController?.viewControllers.first == self {
+			navigationItem.leftBarButtonItems = [ closeButton ]
+		}
+	}
+
+    override open func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+	
+	
+	
+	
+	
+	// MARK: - Touch
+	@IBAction func onTouchCloseButton(_ sender: Any) {
+		presentingViewController?.dismiss(animated: true, completion: nil)
+	}
+	@IBAction func onTouchTitleLabel(_ sender: Any) {
+		UIPasteboard.general.string = directoryURL?.path
+		
+		let vc = UIAlertController(title: "Copied directory path", message: nil, preferredStyle: .alert)
+		vc.addAction(UIAlertAction(title: "Confirm", style: .cancel, handler: nil))
+		present(vc, animated: true, completion: nil)
+	}
+	
+	
+	
+	
+	
+	// MARK: - Goto
+	internal func gotoDirectoryListing(_ directoryURL: URL) -> Void {
+		if let vc = UIStoryboard(name: "Viewer", bundle: Bundle(for: type(of: self))).instantiateViewController(withIdentifier: "LazyFileListViewController") as? LazyFileListViewController {
+			vc.directoryURL = directoryURL
+			navigationController?.pushViewController(vc, animated: true)
+		}
+	}
+	
+	
+	
+	
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    override open func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override open func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return itemURLs.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    override open func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+		let itemURL = itemURLs[indexPath.row]
 
-        // Configure the cell...
+		if let cell = cell as? LazyFileListCell {
+			cell.url = itemURL
+		}
 
         return cell
     }
-    */
+	
+	
+	
+	
+	// MARK: - UITableViewDelegate
+	open override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		let itemURL = itemURLs[indexPath.row]
+		if itemURL.hasDirectoryPath {
+			gotoDirectoryListing(itemURL)
+		}
+	}
+
 
     /*
     // Override to support conditional editing of the table view.

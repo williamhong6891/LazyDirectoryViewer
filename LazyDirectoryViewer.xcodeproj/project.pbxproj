@@ -7,19 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61E637B1EE3C33E00435D39 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C61E637A1EE3C33E00435D39 /* Resource.bundle */; };
+		C61E63871EE3C55C00435D39 /* LazyDirectoryViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = C61E63851EE3C55C00435D39 /* LazyDirectoryViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C61E638A1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */; };
+		C61E638B1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C61E63901EE3C57900435D39 /* Viewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119711ED819D200331141 /* Viewer.storyboard */; };
+		C61E63911EE3C57900435D39 /* LazyFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyFileListViewController.swift */; };
+		C61E63921EE3C57900435D39 /* LazyFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119751ED820CC00331141 /* LazyFileListCell.swift */; };
+		C61E63931EE3C57C00435D39 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C61E637A1EE3C33E00435D39 /* Resource.bundle */; };
+		C61E63951EE3C75E00435D39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63941EE3C75E00435D39 /* MainViewController.swift */; };
+		C61E63971EE3ED6F00435D39 /* ViewerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */; };
+		C61E63981EE3EEB000435D39 /* ViewerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */; };
 		C6B1196B1ED819C100331141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119621ED819C100331141 /* AppDelegate.swift */; };
 		C6B1196C1ED819C100331141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B119631ED819C100331141 /* Assets.xcassets */; };
 		C6B1196D1ED819C100331141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119641ED819C100331141 /* LaunchScreen.storyboard */; };
 		C6B1196E1ED819C100331141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119661ED819C100331141 /* Main.storyboard */; };
-		C6B1196F1ED819C100331141 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C6B119681ED819C100331141 /* Info.plist */; };
 		C6B119701ED819C100331141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119691ED819C100331141 /* ViewController.swift */; };
 		C6B119721ED819D200331141 /* Viewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119711ED819D200331141 /* Viewer.storyboard */; };
 		C6B119741ED81DE000331141 /* LazyFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyFileListViewController.swift */; };
 		C6B119761ED820CC00331141 /* LazyFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119751ED820CC00331141 /* LazyFileListCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C61E63881EE3C55C00435D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C6B119401ED8174900331141 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C61E63821EE3C55C00435D39;
+			remoteInfo = LazyDirectoryViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C61E638F1EE3C55C00435D39 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C61E638B1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		C6B119481ED8174900331141 /* LazyDirectoryViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyDirectoryViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61E637A1EE3C33E00435D39 /* Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resource.bundle; sourceTree = "<group>"; };
+		C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LazyDirectoryViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C61E63851EE3C55C00435D39 /* LazyDirectoryViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LazyDirectoryViewer.h; sourceTree = "<group>"; };
+		C61E63861EE3C55C00435D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C61E63941EE3C75E00435D39 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerUtility.swift; sourceTree = "<group>"; };
+		C6B119481ED8174900331141 /* LazyDirectoryViewerDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LazyDirectoryViewerDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6B119621ED819C100331141 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6B119631ED819C100331141 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6B119651ED819C100331141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -32,21 +72,39 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C6B119451ED8174900331141 /* Frameworks */ = {
+		C61E637F1EE3C55C00435D39 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C6B119451ED8174900331141 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61E638A1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C61E63841EE3C55C00435D39 /* LazyDirectoryViewer */ = {
+			isa = PBXGroup;
+			children = (
+				C61E63851EE3C55C00435D39 /* LazyDirectoryViewer.h */,
+				C61E63861EE3C55C00435D39 /* Info.plist */,
+			);
+			path = LazyDirectoryViewer;
+			sourceTree = "<group>";
+		};
 		C6B1193F1ED8174900331141 = {
 			isa = PBXGroup;
 			children = (
 				C6B119611ED819C100331141 /* Demo */,
 				C6B1196A1ED819C100331141 /* Source */,
+				C61E63841EE3C55C00435D39 /* LazyDirectoryViewer */,
 				C6B119491ED8174900331141 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,7 +112,8 @@
 		C6B119491ED8174900331141 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C6B119481ED8174900331141 /* LazyDirectoryViewer.app */,
+				C6B119481ED8174900331141 /* LazyDirectoryViewerDemo.app */,
+				C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -66,6 +125,7 @@
 				C6B119631ED819C100331141 /* Assets.xcassets */,
 				C6B119641ED819C100331141 /* LaunchScreen.storyboard */,
 				C6B119661ED819C100331141 /* Main.storyboard */,
+				C61E63941EE3C75E00435D39 /* MainViewController.swift */,
 				C6B119681ED819C100331141 /* Info.plist */,
 				C6B119691ED819C100331141 /* ViewController.swift */,
 			);
@@ -75,23 +135,37 @@
 		C6B1196A1ED819C100331141 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */,
 				C6B119711ED819D200331141 /* Viewer.storyboard */,
 				C6B119731ED81DE000331141 /* LazyFileListViewController.swift */,
 				C6B119751ED820CC00331141 /* LazyFileListCell.swift */,
+				C61E637A1EE3C33E00435D39 /* Resource.bundle */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		C61E63801EE3C55C00435D39 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61E63871EE3C55C00435D39 /* LazyDirectoryViewer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
-		C6B119471ED8174900331141 /* LazyDirectoryViewer */ = {
+		C61E63821EE3C55C00435D39 /* LazyDirectoryViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C6B1195A1ED8174900331141 /* Build configuration list for PBXNativeTarget "LazyDirectoryViewer" */;
+			buildConfigurationList = C61E638C1EE3C55C00435D39 /* Build configuration list for PBXNativeTarget "LazyDirectoryViewer" */;
 			buildPhases = (
-				C6B119441ED8174900331141 /* Sources */,
-				C6B119451ED8174900331141 /* Frameworks */,
-				C6B119461ED8174900331141 /* Resources */,
+				C61E637E1EE3C55C00435D39 /* Sources */,
+				C61E637F1EE3C55C00435D39 /* Frameworks */,
+				C61E63801EE3C55C00435D39 /* Headers */,
+				C61E63811EE3C55C00435D39 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -99,7 +173,26 @@
 			);
 			name = LazyDirectoryViewer;
 			productName = LazyDirectoryViewer;
-			productReference = C6B119481ED8174900331141 /* LazyDirectoryViewer.app */;
+			productReference = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6B119471ED8174900331141 /* LazyDirectoryViewerDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6B1195A1ED8174900331141 /* Build configuration list for PBXNativeTarget "LazyDirectoryViewerDemo" */;
+			buildPhases = (
+				C6B119441ED8174900331141 /* Sources */,
+				C6B119451ED8174900331141 /* Frameworks */,
+				C6B119461ED8174900331141 /* Resources */,
+				C61E638F1EE3C55C00435D39 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C61E63891EE3C55C00435D39 /* PBXTargetDependency */,
+			);
+			name = LazyDirectoryViewerDemo;
+			productName = LazyDirectoryViewer;
+			productReference = C6B119481ED8174900331141 /* LazyDirectoryViewerDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -111,6 +204,11 @@
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				TargetAttributes = {
+					C61E63821EE3C55C00435D39 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 7BEV3MKZTB;
+						ProvisioningStyle = Automatic;
+					};
 					C6B119471ED8174900331141 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = 7BEV3MKZTB;
@@ -131,19 +229,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C6B119471ED8174900331141 /* LazyDirectoryViewer */,
+				C6B119471ED8174900331141 /* LazyDirectoryViewerDemo */,
+				C61E63821EE3C55C00435D39 /* LazyDirectoryViewer */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C61E63811EE3C55C00435D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61E63901EE3C57900435D39 /* Viewer.storyboard in Resources */,
+				C61E63931EE3C57C00435D39 /* Resource.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6B119461ED8174900331141 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6B1196F1ED819C100331141 /* Info.plist in Resources */,
 				C6B1196E1ED819C100331141 /* Main.storyboard in Resources */,
 				C6B1196C1ED819C100331141 /* Assets.xcassets in Resources */,
+				C61E637B1EE3C33E00435D39 /* Resource.bundle in Resources */,
 				C6B119721ED819D200331141 /* Viewer.storyboard in Resources */,
 				C6B1196D1ED819C100331141 /* LaunchScreen.storyboard in Resources */,
 			);
@@ -152,18 +260,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C61E637E1EE3C55C00435D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C61E63981EE3EEB000435D39 /* ViewerUtility.swift in Sources */,
+				C61E63911EE3C57900435D39 /* LazyFileListViewController.swift in Sources */,
+				C61E63921EE3C57900435D39 /* LazyFileListCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C6B119441ED8174900331141 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61E63971EE3ED6F00435D39 /* ViewerUtility.swift in Sources */,
 				C6B119701ED819C100331141 /* ViewController.swift in Sources */,
 				C6B119761ED820CC00331141 /* LazyFileListCell.swift in Sources */,
 				C6B119741ED81DE000331141 /* LazyFileListViewController.swift in Sources */,
 				C6B1196B1ED819C100331141 /* AppDelegate.swift in Sources */,
+				C61E63951EE3C75E00435D39 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C61E63891EE3C55C00435D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C61E63821EE3C55C00435D39 /* LazyDirectoryViewer */;
+			targetProxy = C61E63881EE3C55C00435D39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C6B119641ED819C100331141 /* LaunchScreen.storyboard */ = {
@@ -185,6 +313,50 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C61E638D1EE3C55C00435D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BEV3MKZTB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LazyDirectoryViewer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = th1rt3en.LazyDirectoryViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C61E638E1EE3C55C00435D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = 7BEV3MKZTB;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = LazyDirectoryViewer/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = th1rt3en.LazyDirectoryViewer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		C6B119581ED8174900331141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -283,11 +455,12 @@
 		C6B1195B1ED8174900331141 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BEV3MKZTB;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = th1rt3en.LazyDirectoryViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = th1rt3en.LazyDirectoryViewer.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -296,11 +469,12 @@
 		C6B1195C1ED8174900331141 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 7BEV3MKZTB;
 				INFOPLIST_FILE = "$(SRCROOT)/Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = th1rt3en.LazyDirectoryViewer;
+				PRODUCT_BUNDLE_IDENTIFIER = th1rt3en.LazyDirectoryViewer.Demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -309,6 +483,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C61E638C1EE3C55C00435D39 /* Build configuration list for PBXNativeTarget "LazyDirectoryViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C61E638D1EE3C55C00435D39 /* Debug */,
+				C61E638E1EE3C55C00435D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		C6B119431ED8174900331141 /* Build configuration list for PBXProject "LazyDirectoryViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -318,13 +500,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C6B1195A1ED8174900331141 /* Build configuration list for PBXNativeTarget "LazyDirectoryViewer" */ = {
+		C6B1195A1ED8174900331141 /* Build configuration list for PBXNativeTarget "LazyDirectoryViewerDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C6B1195B1ED8174900331141 /* Debug */,
 				C6B1195C1ED8174900331141 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
