@@ -8,11 +8,17 @@
 
 import UIKit
 
+/**
+List items within the desired directory
+*/
 open class LazyFileListViewController: UITableViewController {
 	@IBOutlet internal var closeButton: UIBarButtonItem!
 	@IBOutlet var navigationTitleLabel: UILabel?
 	
-	var directoryURL: URL? {
+	/**
+	Directory to show
+	*/
+	public var directoryURL: URL? {
 		didSet {
 			print("New directory path: \(directoryURL?.path ?? "")")
 
@@ -29,7 +35,7 @@ open class LazyFileListViewController: UITableViewController {
 			navigationTitleLabel?.text = directoryURL?.path
 		}
 	}
-	var itemURLs: [URL]	= []
+	internal var itemURLs: [URL]	= []
 
     override open func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +67,19 @@ open class LazyFileListViewController: UITableViewController {
 	
 	
 	
+	/**
+	Create this view controller
+	*/
+	open class func create() -> LazyFileListViewController {
+		if let vc = UIStoryboard(name: "Viewer", bundle: Bundle(for: LazyFileListViewController.self)).instantiateViewController(withIdentifier: "LazyFileListViewController") as? LazyFileListViewController {
+			return vc
+		}
+		
+		return LazyFileListViewController(nibName: nil, bundle: nil)
+	}
+	
+	
+	
 	
 	// MARK: - Touch
 	@IBAction func onTouchCloseButton(_ sender: Any) {
@@ -80,10 +99,9 @@ open class LazyFileListViewController: UITableViewController {
 	
 	// MARK: - Goto
 	internal func gotoDirectoryListing(_ directoryURL: URL) -> Void {
-		if let vc = UIStoryboard(name: "Viewer", bundle: Bundle(for: type(of: self))).instantiateViewController(withIdentifier: "LazyFileListViewController") as? LazyFileListViewController {
-			vc.directoryURL = directoryURL
-			navigationController?.pushViewController(vc, animated: true)
-		}
+		let vc = LazyFileListViewController.create()
+		vc.directoryURL = directoryURL
+		navigationController?.pushViewController(vc, animated: true)
 	}
 	
 	
