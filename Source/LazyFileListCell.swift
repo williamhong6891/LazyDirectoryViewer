@@ -1,5 +1,5 @@
 //
-//  LazyFileListCell.swift
+//  LazyDirectoryViewCell.swift
 //  LazyDirectoryViewer
 //
 //  Created by Ho Lun Wan on 26/5/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-open class LazyFileListCell: UITableViewCell {
+open class LazyDirectoryViewCell: UITableViewCell {
 	@IBOutlet internal var iconImageView: UIImageView?
 	@IBOutlet internal var titleLabel: UILabel?
 	

@@ -71,11 +71,11 @@ class MainViewController: UITableViewController {
 	
 	// MARK: - Goto
 	func gotoViewer(forURL url: URL?) -> Void {
-		if let nav = UIStoryboard(name: "Viewer", bundle: nil).instantiateInitialViewController() as? UINavigationController,
-		   let vc = nav.viewControllers.first as? LazyFileListViewController {
-			vc.directoryURL = url
-			present(nav, animated: true, completion: nil)
-		}
+		let vc = LazyDirectoryViewer.create()
+		vc.directoryURL = url
+		
+		let nav = UINavigationController(rootViewController: vc)
+		present(nav, animated: true, completion: nil)
 	}
 	
 	

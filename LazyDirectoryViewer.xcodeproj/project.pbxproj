@@ -12,7 +12,7 @@
 		C61E638A1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */; };
 		C61E638B1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C61E63901EE3C57900435D39 /* Viewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119711ED819D200331141 /* Viewer.storyboard */; };
-		C61E63911EE3C57900435D39 /* LazyFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyFileListViewController.swift */; };
+		C61E63911EE3C57900435D39 /* LazyDirectoryViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyDirectoryViewer.swift */; };
 		C61E63921EE3C57900435D39 /* LazyFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119751ED820CC00331141 /* LazyFileListCell.swift */; };
 		C61E63931EE3C57C00435D39 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C61E637A1EE3C33E00435D39 /* Resource.bundle */; };
 		C61E63951EE3C75E00435D39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63941EE3C75E00435D39 /* MainViewController.swift */; };
@@ -22,9 +22,8 @@
 		C6B1196C1ED819C100331141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B119631ED819C100331141 /* Assets.xcassets */; };
 		C6B1196D1ED819C100331141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119641ED819C100331141 /* LaunchScreen.storyboard */; };
 		C6B1196E1ED819C100331141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119661ED819C100331141 /* Main.storyboard */; };
-		C6B119701ED819C100331141 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119691ED819C100331141 /* ViewController.swift */; };
 		C6B119721ED819D200331141 /* Viewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119711ED819D200331141 /* Viewer.storyboard */; };
-		C6B119741ED81DE000331141 /* LazyFileListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyFileListViewController.swift */; };
+		C6B119741ED81DE000331141 /* LazyDirectoryViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyDirectoryViewer.swift */; };
 		C6B119761ED820CC00331141 /* LazyFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119751ED820CC00331141 /* LazyFileListCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,9 +64,8 @@
 		C6B119651ED819C100331141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6B119671ED819C100331141 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C6B119681ED819C100331141 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6B119691ED819C100331141 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C6B119711ED819D200331141 /* Viewer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Viewer.storyboard; sourceTree = "<group>"; };
-		C6B119731ED81DE000331141 /* LazyFileListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyFileListViewController.swift; sourceTree = "<group>"; };
+		C6B119731ED81DE000331141 /* LazyDirectoryViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyDirectoryViewer.swift; sourceTree = "<group>"; };
 		C6B119751ED820CC00331141 /* LazyFileListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LazyFileListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -127,7 +125,6 @@
 				C6B119661ED819C100331141 /* Main.storyboard */,
 				C61E63941EE3C75E00435D39 /* MainViewController.swift */,
 				C6B119681ED819C100331141 /* Info.plist */,
-				C6B119691ED819C100331141 /* ViewController.swift */,
 			);
 			path = Demo;
 			sourceTree = "<group>";
@@ -137,7 +134,7 @@
 			children = (
 				C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */,
 				C6B119711ED819D200331141 /* Viewer.storyboard */,
-				C6B119731ED81DE000331141 /* LazyFileListViewController.swift */,
+				C6B119731ED81DE000331141 /* LazyDirectoryViewer.swift */,
 				C6B119751ED820CC00331141 /* LazyFileListCell.swift */,
 				C61E637A1EE3C33E00435D39 /* Resource.bundle */,
 			);
@@ -265,7 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61E63981EE3EEB000435D39 /* ViewerUtility.swift in Sources */,
-				C61E63911EE3C57900435D39 /* LazyFileListViewController.swift in Sources */,
+				C61E63911EE3C57900435D39 /* LazyDirectoryViewer.swift in Sources */,
 				C61E63921EE3C57900435D39 /* LazyFileListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,9 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61E63971EE3ED6F00435D39 /* ViewerUtility.swift in Sources */,
-				C6B119701ED819C100331141 /* ViewController.swift in Sources */,
 				C6B119761ED820CC00331141 /* LazyFileListCell.swift in Sources */,
-				C6B119741ED81DE000331141 /* LazyFileListViewController.swift in Sources */,
+				C6B119741ED81DE000331141 /* LazyDirectoryViewer.swift in Sources */,
 				C6B1196B1ED819C100331141 /* AppDelegate.swift in Sources */,
 				C61E63951EE3C75E00435D39 /* MainViewController.swift in Sources */,
 			);
@@ -490,6 +486,7 @@
 				C61E638E1EE3C55C00435D39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6B119431ED8174900331141 /* Build configuration list for PBXProject "LazyDirectoryViewer" */ = {
 			isa = XCConfigurationList;
