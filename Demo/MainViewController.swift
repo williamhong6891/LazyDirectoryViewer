@@ -71,7 +71,7 @@ class MainViewController: UITableViewController {
 	
 	// MARK: - Goto
 	func gotoViewer(forURL url: URL?) -> Void {
-		let vc = LazyFileListViewController.create()
+		let vc = LazyDirectoryViewer.create()
 		vc.directoryURL = url
 		
 		let nav = UINavigationController(rootViewController: vc)

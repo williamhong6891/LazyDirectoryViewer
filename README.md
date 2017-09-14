@@ -1,14 +1,14 @@
 # LazyDirectoryViewer
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
-View the contents at certain directory path.
+Display the contents at certain directory path visually. 
 
 ## Requirements
 - iOS 9.0+
 - Swift 3.0+
 
 ## Usage
-Create the viewer by `LazyFileListViewController.create()` and set the `directoryURL` for the directory you want to view. 
+Create the viewer by `LazyDirectoryViewer.create()` and set the `directoryURL` for the directory you want to view. 
 
 ## Installation
 ### Carthage

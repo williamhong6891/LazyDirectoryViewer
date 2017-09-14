@@ -1,5 +1,5 @@
 //
-//  LazyFileListViewController.swift
+//  LazyDirectoryViewer.swift
 //  LazyDirectoryViewer
 //
 //  Created by Ho Lun Wan on 26/5/2017.
@@ -11,7 +11,7 @@ import UIKit
 /**
 List items within the desired directory
 */
-open class LazyFileListViewController: UITableViewController {
+open class LazyDirectoryViewer: UITableViewController {
 	@IBOutlet internal var closeButton: UIBarButtonItem!
 	@IBOutlet var navigationTitleLabel: UILabel?
 	
@@ -70,12 +70,12 @@ open class LazyFileListViewController: UITableViewController {
 	/**
 	Create this view controller
 	*/
-	open class func create() -> LazyFileListViewController {
-		if let vc = UIStoryboard(name: "Viewer", bundle: Bundle(for: LazyFileListViewController.self)).instantiateViewController(withIdentifier: "LazyFileListViewController") as? LazyFileListViewController {
+	open class func create() -> LazyDirectoryViewer {
+		if let vc = UIStoryboard(name: "Viewer", bundle: Bundle(for: LazyDirectoryViewer.self)).instantiateViewController(withIdentifier: "LazyDirectoryViewer") as? LazyDirectoryViewer {
 			return vc
 		}
 		
-		return LazyFileListViewController(nibName: nil, bundle: nil)
+		return LazyDirectoryViewer(nibName: nil, bundle: nil)
 	}
 	
 	
@@ -99,7 +99,7 @@ open class LazyFileListViewController: UITableViewController {
 	
 	// MARK: - Goto
 	internal func gotoDirectoryListing(_ directoryURL: URL) -> Void {
-		let vc = LazyFileListViewController.create()
+		let vc = LazyDirectoryViewer.create()
 		vc.directoryURL = directoryURL
 		navigationController?.pushViewController(vc, animated: true)
 	}
@@ -123,7 +123,7 @@ open class LazyFileListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 		let itemURL = itemURLs[indexPath.row]
 
-		if let cell = cell as? LazyFileListCell {
+		if let cell = cell as? LazyDirectoryViewCell {
 			cell.url = itemURL
 		}
 
