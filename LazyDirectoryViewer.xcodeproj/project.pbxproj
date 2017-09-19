@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C61E637B1EE3C33E00435D39 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C61E637A1EE3C33E00435D39 /* Resource.bundle */; };
+		C61D34C11F71639A0040EF53 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61D34C01F71639A0040EF53 /* Utility.swift */; };
 		C61E63871EE3C55C00435D39 /* LazyDirectoryViewer.h in Headers */ = {isa = PBXBuildFile; fileRef = C61E63851EE3C55C00435D39 /* LazyDirectoryViewer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C61E638A1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */; };
 		C61E638B1EE3C55C00435D39 /* LazyDirectoryViewer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -16,15 +16,11 @@
 		C61E63921EE3C57900435D39 /* LazyFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119751ED820CC00331141 /* LazyFileListCell.swift */; };
 		C61E63931EE3C57C00435D39 /* Resource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C61E637A1EE3C33E00435D39 /* Resource.bundle */; };
 		C61E63951EE3C75E00435D39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63941EE3C75E00435D39 /* MainViewController.swift */; };
-		C61E63971EE3ED6F00435D39 /* ViewerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */; };
 		C61E63981EE3EEB000435D39 /* ViewerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61E63961EE3ED6F00435D39 /* ViewerUtility.swift */; };
 		C6B1196B1ED819C100331141 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119621ED819C100331141 /* AppDelegate.swift */; };
 		C6B1196C1ED819C100331141 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6B119631ED819C100331141 /* Assets.xcassets */; };
 		C6B1196D1ED819C100331141 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119641ED819C100331141 /* LaunchScreen.storyboard */; };
 		C6B1196E1ED819C100331141 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119661ED819C100331141 /* Main.storyboard */; };
-		C6B119721ED819D200331141 /* Viewer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6B119711ED819D200331141 /* Viewer.storyboard */; };
-		C6B119741ED81DE000331141 /* LazyDirectoryViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119731ED81DE000331141 /* LazyDirectoryViewer.swift */; };
-		C6B119761ED820CC00331141 /* LazyFileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B119751ED820CC00331141 /* LazyFileListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +48,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C61D34C01F71639A0040EF53 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		C61E637A1EE3C33E00435D39 /* Resource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Resource.bundle; sourceTree = "<group>"; };
 		C61E63831EE3C55C00435D39 /* LazyDirectoryViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LazyDirectoryViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C61E63851EE3C55C00435D39 /* LazyDirectoryViewer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LazyDirectoryViewer.h; sourceTree = "<group>"; };
@@ -124,6 +121,7 @@
 				C6B119641ED819C100331141 /* LaunchScreen.storyboard */,
 				C6B119661ED819C100331141 /* Main.storyboard */,
 				C61E63941EE3C75E00435D39 /* MainViewController.swift */,
+				C61D34C01F71639A0040EF53 /* Utility.swift */,
 				C6B119681ED819C100331141 /* Info.plist */,
 			);
 			path = Demo;
@@ -248,8 +246,6 @@
 			files = (
 				C6B1196E1ED819C100331141 /* Main.storyboard in Resources */,
 				C6B1196C1ED819C100331141 /* Assets.xcassets in Resources */,
-				C61E637B1EE3C33E00435D39 /* Resource.bundle in Resources */,
-				C6B119721ED819D200331141 /* Viewer.storyboard in Resources */,
 				C6B1196D1ED819C100331141 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,9 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C61E63971EE3ED6F00435D39 /* ViewerUtility.swift in Sources */,
-				C6B119761ED820CC00331141 /* LazyFileListCell.swift in Sources */,
-				C6B119741ED81DE000331141 /* LazyDirectoryViewer.swift in Sources */,
+				C61D34C11F71639A0040EF53 /* Utility.swift in Sources */,
 				C6B1196B1ED819C100331141 /* AppDelegate.swift in Sources */,
 				C61E63951EE3C75E00435D39 /* MainViewController.swift in Sources */,
 			);

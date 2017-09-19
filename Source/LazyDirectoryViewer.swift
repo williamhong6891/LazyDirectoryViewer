@@ -20,19 +20,21 @@ open class LazyDirectoryViewer: UITableViewController {
 	*/
 	public var directoryURL: URL? {
 		didSet {
-			print("New directory path: \(directoryURL?.path ?? "")")
-
 			itemURLs.removeAll()
 			if let directoryURL = directoryURL {
+				let pathStr = directoryURL.path
+				let attr = self.navigationController?.navigationBar.titleTextAttributes
+				navigationTitleLabel?.attributedText = NSAttributedString(string: pathStr, attributes: attr)
+				
 				do {
 					let urls = try FileManager.default.contentsOfDirectory(at: directoryURL, includingPropertiesForKeys: nil, options: [])
 					itemURLs.append(contentsOf: urls)
-				} catch let err {
-					print("  Error: \(err)")
+				} catch {
+					self.showError(error)
 				}
-				
+			} else {
+				navigationTitleLabel?.attributedText = nil
 			}
-			navigationTitleLabel?.text = directoryURL?.path
 		}
 	}
 	internal var itemURLs: [URL]	= []
@@ -81,6 +83,17 @@ open class LazyDirectoryViewer: UITableViewController {
 	
 	
 	
+	
+	// MARK: - Helper
+	func showError(_ error: Error) -> Void {
+		let vc = UIAlertController(title: "", message: error.localizedDescription, preferredStyle: .alert)
+		vc.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+		self.present(vc, animated: true, completion: nil)
+	}
+	
+	
+	
+	
 	// MARK: - Touch
 	@IBAction func onTouchCloseButton(_ sender: Any) {
 		presentingViewController?.dismiss(animated: true, completion: nil)
@@ -108,7 +121,6 @@ open class LazyDirectoryViewer: UITableViewController {
 	
 	
     // MARK: - Table view data source
-
     override open func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -140,27 +152,49 @@ open class LazyDirectoryViewer: UITableViewController {
 			gotoDirectoryListing(itemURL)
 		}
 	}
+	open override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+		let itemURL = itemURLs[indexPath.row]
+		let fm = FileManager.default
+		
+		do {
+			let attr = try fm.attributesOfItem(atPath: itemURL.path)
+			var str = ""
+			for (key, value) in attr {
+				str += "\(key.rawValue): \(value)\n"
+			}
+			let vc = UIAlertController(title: "", message: str, preferredStyle: .alert)
+			vc.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+			self.present(vc, animated: true, completion: nil)
+		} catch {
+			self.showError(error)
+		}
+	}
 
 
-    /*
     // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+    open override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
-    */
 
-    /*
     // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    open override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
+			let fm = FileManager.default
+			let itemURL = itemURLs[indexPath.row]
+			do {
+				try fm.removeItem(at: itemURL)
+				itemURLs.remove(at: indexPath.row)
+				
+				// Delete the row from the data source
+				tableView.deleteRows(at: [indexPath], with: .fade)
+			} catch {
+				self.showError(error)
+			}
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }    
     }
-    */
 
     /*
     // Override to support rearranging the table view.
