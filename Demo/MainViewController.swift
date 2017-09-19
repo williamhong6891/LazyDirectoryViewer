@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LazyDirectoryViewer
 
 class MainViewController: UITableViewController {
 	internal let appDir				= "app"
@@ -65,6 +66,24 @@ class MainViewController: UITableViewController {
 	@IBAction func onTouchBackground(_ sender: Any) {
 		resignAllPossibleFirstResponders()
 	}
+	@IBAction func onTouchAddFileButton(_ sender: Any) {
+		let str = "In a storyboard-based application, you will often want to do a little preparation before navigation"
+		let fm = FileManager.default
+		guard let strData = str.data(using: .utf8),
+			let url = fm.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
+				return
+		}
+		
+		let filename = String(format: "%.0f", Date().timeIntervalSince1970 * 1000)
+		
+		do {
+			try Utility.writeData(strData, toDirectory: url, withName: filename, extension: "txt")
+		} catch {
+			print(error)
+		}
+	}
+	
+	
 	
 	
 	
