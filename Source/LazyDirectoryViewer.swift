@@ -48,8 +48,8 @@ open class LazyDirectoryViewer: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
-	open override func didMove(toParentViewController parent: UIViewController?) {
-		super.didMove(toParentViewController: parent)
+    open override func didMove(toParent parent: UIViewController?) {
+        super.didMove(toParent: parent)
 		
 	}
 	open override func viewWillAppear(_ animated: Bool) {
@@ -178,7 +178,7 @@ open class LazyDirectoryViewer: UITableViewController {
     }
 
     // Override to support editing the table view.
-    open override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    open override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
 			let fm = FileManager.default
 			let itemURL = itemURLs[indexPath.row]
